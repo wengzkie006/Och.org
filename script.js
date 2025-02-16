@@ -1,7 +1,21 @@
-
 // Alarm Functionality
 const alarmSound = document.getElementById("alarm-sound");
 let alarmTimeout;
+
+// Visual indicator for ringing alarm
+const alarmIndicator = document.createElement("div");
+alarmIndicator.id = "alarm-indicator";
+alarmIndicator.style.position = "fixed";
+alarmIndicator.style.top = "10px";
+alarmIndicator.style.left = "50%";
+alarmIndicator.style.transform = "translateX(-50%)";
+alarmIndicator.style.backgroundColor = "red";
+alarmIndicator.style.color = "white";
+alarmIndicator.style.padding = "10px 20px";
+alarmIndicator.style.borderRadius = "5px";
+alarmIndicator.style.zIndex = "1000";
+alarmIndicator.style.display = "none"; // Initially hidden
+document.body.appendChild(alarmIndicator);
 
 function setAlarm(alarmNumber) {
   const alarmTimeInput = document.getElementById(`alarm-time-${alarmNumber}`);
@@ -36,7 +50,21 @@ function setAlarm(alarmNumber) {
     alarmSound.src = alarmTone;
     alarmSound.play();
     stopAlarmButton.disabled = false;
-    alert(`Alarm ${alarmNumber} is ringing!`);
+
+    // Show visual indicator
+    alarmIndicator.textContent = `Alarm ${alarmNumber} is ringing!`;
+    alarmIndicator.style.display = "block";
+
+    // Optional: Add a flashing effect
+    let flashInterval = setInterval(() => {
+      alarmIndicator.style.backgroundColor = alarmIndicator.style.backgroundColor === "red" ? "orange" : "red";
+    }, 500);
+
+    // Stop flashing and hide indicator when alarm is stopped
+    stopAlarmButton.addEventListener("click", () => {
+      clearInterval(flashInterval);
+      alarmIndicator.style.display = "none";
+    });
   }, timeDifference);
 
   alert(`Alarm ${alarmNumber} set for ${alarmTime}`);
@@ -48,6 +76,9 @@ function stopAlarm(alarmNumber) {
   alarmSound.pause();
   alarmSound.currentTime = 0;
   stopAlarmButton.disabled = true;
+
+  // Hide the visual indicator
+  alarmIndicator.style.display = "none";
 }
 
 // Upload to Google Drive
