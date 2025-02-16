@@ -35,12 +35,13 @@ body, html {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
   }
   
   nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1rem; /* Relative unit */
     font-weight: bold;
     transition: color 0.3s ease;
   }
@@ -54,7 +55,7 @@ body, html {
     position: fixed;
     top: 20px;
     right: 20px;
-    font-size: 24px;
+    font-size: 1.5rem; /* Relative unit */
     font-family: 'Space Mono', monospace;
     color: var(--emerald);
     z-index: 1000;
@@ -98,9 +99,10 @@ body, html {
   #home {
     background-image: url('background1.jpg');
   }
+  
   #home h1 {
     color: var(--emerald);
-    font-size: 6rem; /* Larger font size */
+    font-size: 4rem; /* Adjusted for responsiveness */
     font-weight: 700;
     margin-bottom: 20px;
     line-height: 1.1;
@@ -108,32 +110,33 @@ body, html {
   
   #home h3 {
     color: var(--burnt-orange);
-    font-size: 2.5rem;
+    font-size: 2rem; /* Adjusted for responsiveness */
     font-weight: 600;
     margin-bottom: 30px;
   }
   
   #home p {
-    font-size: 1.25rem;
+    font-size: 1rem; /* Adjusted for responsiveness */
     line-height: 1.6;
     max-width: 800px;
   }
   
   /* Och.org Section */
+  #och {
+    background-image: url('background2.jpg');
+  }
+  
   #och h1 {
     color: var(--emerald);
-    font-size: 6rem;
+    font-size: 4rem; /* Adjusted for responsiveness */
     font-weight: 700;
     margin-bottom: 20px;
   }
   
-  #och {
-    background-image: url('background2.jpg');
-  }
   #och h2 {
     background-color: var(--burnt-orange);
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.25rem; /* Adjusted for responsiveness */
     font-weight: 600;
     padding: 10px 20px;
     border-radius: 5px;
@@ -143,13 +146,13 @@ body, html {
   
   #och h3 {
     color: var(--emerald);
-    font-size: 2.5rem;
+    font-size: 2rem; /* Adjusted for responsiveness */
     font-weight: 600;
     margin-bottom: 20px;
   }
   
   #och p {
-    font-size: 1.25rem;
+    font-size: 1rem; /* Adjusted for responsiveness */
     line-height: 1.6;
     max-width: 800px;
   }
@@ -158,34 +161,35 @@ body, html {
   #features {
     background-image: url('background3.jpg');
   }
+  
   #features h2 {
     color: var(--emerald);
-    font-size: 6rem;
+    font-size: 4rem; /* Adjusted for responsiveness */
     font-weight: 700;
     margin-bottom: 20px;
   }
   
   #features h3 {
     color: var(--burnt-orange);
-    font-size: 2.5rem;
+    font-size: 2rem; /* Adjusted for responsiveness */
     font-weight: 600;
     margin-bottom: 20px;
   }
   
   #features p {
-    font-size: 1.25rem;
+    font-size: 1rem; /* Adjusted for responsiveness */
     line-height: 1.6;
     max-width: 800px;
   }
   
- /* Set Alarm Section */
- #alarm {
+  /* Set Alarm Section */
+  #alarm {
     background-image: url('background4.jpg');
   }
   
   #alarm h1 {
     color: var(--emerald);
-    font-size: 6rem;
+    font-size: 4rem; /* Adjusted for responsiveness */
     font-weight: 700;
     margin-bottom: 20px;
   }
@@ -199,6 +203,7 @@ body, html {
   
   .alarm-set label {
     color: var(--emerald);
+    font-size: 1rem; /* Adjusted for responsiveness */
   }
   
   .alarm-set button {
@@ -209,6 +214,7 @@ body, html {
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease;
+    font-size: 1rem; /* Adjusted for responsiveness */
   }
   
   .alarm-set button:hover {
@@ -216,18 +222,19 @@ body, html {
   }
   
   /* Upload Memories Section */
-   #upload {
+  #upload {
     background-image: url('background5.jpg');
   }
+  
   #upload h1 {
     color: var(--emerald);
-    font-size: 6rem;
+    font-size: 4rem; /* Adjusted for responsiveness */
     font-weight: 700;
     margin-bottom: 20px;
   }
   
   #upload p {
-    font-size: 1.25rem;
+    font-size: 1rem; /* Adjusted for responsiveness */
     line-height: 1.6;
     max-width: 800px;
     margin-bottom: 30px;
@@ -241,6 +248,7 @@ body, html {
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease;
+    font-size: 1rem; /* Adjusted for responsiveness */
   }
   
   .upload-button:hover {
@@ -255,5 +263,192 @@ body, html {
     color: white;
     position: relative;
     z-index: 1000;
-    font-size: 1rem;
+    font-size: 1rem; /* Adjusted for responsiveness */
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    /* Navigation */
+    nav ul {
+      gap: 10px;
+    }
+  
+    nav ul li a {
+      font-size: 0.9rem;
+    }
+  
+    /* Clock */
+    .clock {
+      font-size: 1.25rem;
+      top: 10px;
+      right: 10px;
+    }
+  
+    /* Home Section */
+    #home h1 {
+      font-size: 3rem;
+    }
+  
+    #home h3 {
+      font-size: 1.5rem;
+    }
+  
+    #home p {
+      font-size: 0.9rem;
+    }
+  
+    /* Och.org Section */
+    #och h1 {
+      font-size: 3rem;
+    }
+  
+    #och h2 {
+      font-size: 1rem;
+    }
+  
+    #och h3 {
+      font-size: 1.5rem;
+    }
+  
+    #och p {
+      font-size: 0.9rem;
+    }
+  
+    /* Features Section */
+    #features h2 {
+      font-size: 3rem;
+    }
+  
+    #features h3 {
+      font-size: 1.5rem;
+    }
+  
+    #features p {
+      font-size: 0.9rem;
+    }
+  
+    /* Set Alarm Section */
+    #alarm h1 {
+      font-size: 3rem;
+    }
+  
+    .alarm-set label {
+      font-size: 0.9rem;
+    }
+  
+    .alarm-set button {
+      font-size: 0.9rem;
+    }
+  
+    /* Upload Memories Section */
+    #upload h1 {
+      font-size: 3rem;
+    }
+  
+    #upload p {
+      font-size: 0.9rem;
+    }
+  
+    .upload-button {
+      font-size: 0.9rem;
+    }
+  
+    /* Footer */
+    footer {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Navigation */
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+    }
+  
+    nav ul li a {
+      font-size: 0.8rem;
+    }
+  
+    /* Clock */
+    .clock {
+      font-size: 1rem;
+      top: 5px;
+      right: 5px;
+    }
+  
+    /* Home Section */
+    #home h1 {
+      font-size: 2rem;
+    }
+  
+    #home h3 {
+      font-size: 1.25rem;
+    }
+  
+    #home p {
+      font-size: 0.8rem;
+    }
+  
+    /* Och.org Section */
+    #och h1 {
+      font-size: 2rem;
+    }
+  
+    #och h2 {
+      font-size: 0.9rem;
+    }
+  
+    #och h3 {
+      font-size: 1.25rem;
+    }
+  
+    #och p {
+      font-size: 0.8rem;
+    }
+  
+    /* Features Section */
+    #features h2 {
+      font-size: 2rem;
+    }
+  
+    #features h3 {
+      font-size: 1.25rem;
+    }
+  
+    #features p {
+      font-size: 0.8rem;
+    }
+  
+    /* Set Alarm Section */
+    #alarm h1 {
+      font-size: 2rem;
+    }
+  
+    .alarm-set label {
+      font-size: 0.8rem;
+    }
+  
+    .alarm-set button {
+      font-size: 0.8rem;
+    }
+  
+    /* Upload Memories Section */
+    #upload h1 {
+      font-size: 2rem;
+    }
+  
+    #upload p {
+      font-size: 0.8rem;
+    }
+  
+    .upload-button {
+      font-size: 0.8rem;
+    }
+  
+    /* Footer */
+    footer {
+      font-size: 0.8rem;
+    }
   }

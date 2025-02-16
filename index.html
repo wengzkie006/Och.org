@@ -11,6 +11,202 @@
     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+    /* Base Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      margin: 0;
+      font-weight: bold;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+      flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    }
+
+    nav ul li {
+      margin: 10px 15px; /* Adjusted margin for better spacing */
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      display: block;
+      font-size: 1rem;
+    }
+
+    .content {
+      padding: 20px;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto; /* Center content */
+    }
+
+    .parallax {
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 50px 20px;
+    }
+
+    .clock {
+      font-size: 2rem;
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .alarm-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .alarm-set {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .alarm-set label {
+      font-size: 1rem;
+    }
+
+    .alarm-set input,
+    .alarm-set select,
+    .alarm-set button {
+      width: 100%;
+      max-width: 300px; /* Limit width for better usability */
+      padding: 10px;
+      font-size: 1rem;
+    }
+
+    .upload-button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive Font Sizes */
+    h1 {
+      font-size: 3rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      h2 {
+        font-size: 1.75rem;
+      }
+
+      h3 {
+        font-size: 1.25rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+
+      .clock {
+        font-size: 1.75rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav ul li {
+        margin: 5px 0;
+      }
+
+      .alarm-container {
+        flex-direction: column;
+      }
+
+      .alarm-set input,
+      .alarm-set select,
+      .alarm-set button {
+        max-width: 100%; /* Full width on smaller screens */
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      h3 {
+        font-size: 1.1rem;
+      }
+
+      p {
+        font-size: 0.8rem;
+      }
+
+      .clock {
+        font-size: 1.5rem;
+      }
+
+      .upload-button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+      }
+
+      footer {
+        font-size: 0.8rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -31,9 +227,9 @@
   <!-- Home Section -->
   <section id="home" class="parallax">
     <div class="content">
-      <h1 class="text-6xl font-bold mb-4">OCH.ORG</h1>
-      <h3 class="text-2xl font-semibold text-emerald mb-6">A MULTI-FUNCTION PLATFORM</h3>
-      <p class="text-lg max-w-2xl">
+      <h1>OCH.ORG</h1>
+      <h3>A MULTI-FUNCTION PLATFORM</h3>
+      <p>
         Life is busy, but staying organized doesn't have to be. This personalized web-based tool is designed to help Ms. Maria Theresa P. Ochagavia manage her schedule, tasks, and priorities with ease ? all in one place.
       </p>
     </div>
@@ -42,14 +238,14 @@
   <!-- Och.org Section -->
   <section id="och" class="parallax">
     <div class="content">
-      <h1 class="text-6xl font-bold text-emerald mb-4">OCH .ORG</h1>
-      <h2 class="text-2xl font-semibold text-burnt-orange bg-opacity-80 p-2 rounded mt-2">WEBSITE WORKING IN PROGRESS &gt;&gt;</h2>
-      <h3 class="text-2xl font-bold text-emerald mt-6">WHAT ?</h3>
-      <p class="text-lg text-muted-foreground mt-4 max-w-2xl">
+      <h1>OCH .ORG</h1>
+      <h2>WEBSITE WORKING IN PROGRESS &gt;&gt;</h2>
+      <h3>WHAT ?</h3>
+      <p>
         This website is a labor of love, just like everything worth creating. Thank you for being part of the journey!
       </p>
-      <hr class="my-6 border-muted" />
-      <p class="text-lg text-muted-foreground max-w-2xl">
+      <hr />
+      <p>
         This website is a work in progress, just like life. We're learning, growing, and improving every day.
       </p>
     </div>
@@ -58,24 +254,24 @@
   <!-- Features Section -->
   <section id="features" class="parallax">
     <div class="content">
-      <h2 class="text-6xl font-bold mb-6">FEATURES . . .</h2>
-      <h3 class="text-3xl font-semibold mb-4">
+      <h2>FEATURES . . .</h2>
+      <h3>
         AN ORGANIZED SCHEDULE? <br />
         NO WORRIES!
       </h3>
-      <p class="text-lg max-w-2xl">
+      <p>
         Effortless Organization, Timeless Memories. Your personalized website for a clutter-free life and a heart full of joy.
       </p>
     </div>
   </section>
 
-<!-- Set Alarm Section -->
-<section id="alarm" class="parallax">
+  <!-- Set Alarm Section -->
+  <section id="alarm" class="parallax">
     <div class="content">
-        <h1 class="text-6xl font-bold text-emerald mb-6">PERSONALIZED ALARM CLOCK</h1>
-      <p class="text-muted-foreground">Wake Up to a Smarter Day, Your Personalized Alarm Clock, Designed Just for You!</p>
-      <p class="text-muted-foreground mb-6">Because every morning should feel like a fresh start, not a rude awakening.</p>
-      <p class="text-muted-foreground">Because 5 More Minutes Shouldn't Turn Into 50. Meet Your New Wake-Up Buddy!</p>
+      <h1>PERSONALIZED ALARM CLOCK</h1>
+      <p>Wake Up to a Smarter Day, Your Personalized Alarm Clock, Designed Just for You!</p>
+      <p>Because every morning should feel like a fresh start, not a rude awakening.</p>
+      <p>Because 5 More Minutes Shouldn't Turn Into 50. Meet Your New Wake-Up Buddy!</p>
       <div class="alarm-container">
         <!-- Alarm 1 -->
         <div class="alarm-set">
@@ -124,8 +320,8 @@
   <!-- Upload Memories Section -->
   <section id="upload" class="parallax">
     <div class="content">
-      <h1 class="text-6xl font-bold text-emerald mb-6">Upload Memories</h1>
-      <p class="text-lg text-muted-foreground max-w-2xl mb-8">
+      <h1>Upload Memories</h1>
+      <p>
         Upload your memories directly to Google Drive.
       </p>
       <button class="upload-button" onclick="uploadToDrive()">Upload to Google Drive</button>
